@@ -1,0 +1,76 @@
+The DOM (Document Object Model) is a programming interface for web documents as html pages.
+The DOM represents the web page as a tree like structure where each part of the page(heading , paragraphs , tree etc) is node in that tree. 
+Tree Structure:
+
+                                                        window
+                                                            |
+                                                            \/
+                                                        document
+                                                            |
+                                                            \/
+                                                           html
+                                                            |
+                                                     ___________________
+                                                    |                   |
+                                                    \/                  \/
+                                                   head                body
+                                                    |                    |       
+                                             ___________________         \/
+                                            |                   |       div
+                                            \/                  \/       |
+                                            meta               title     ___________________
+                                                                        |                   |
+                                                                       \/                   \/
+                                                                      header           paragraph
+
+example html code :
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="first-div">
+        <h1 id="first-heading">Dom learning</h1>
+        <p class="para">para 1</p>
+        <h2>seond heading</h2>
+    </div>
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+example dom tree
+                                                          window
+                                                            |
+                                                            \/
+                                                        document
+                                                            |
+                                                            \/
+                                                           html
+                                                            |
+                                                     ___________________
+                                                    |                   |
+                                                    \/                  \/
+                                                   head                body
+                                                    |                    |--------------------------------|      
+                                             ___________________         \/                               \/   
+                                            |                   |       div                              div
+                                            \/                  \/       |                                 |     
+                                            meta               title     |                                 \/
+                                                                         |                                 ul
+                                                                         |                                  |-------------|
+                                                                         |                                  \/            \/
+                                                                         |                                  li            li
+                                                                         |
+                                                                         |
+                                                                         _____________________________________
+                                                                        |                   |                 |
+                                                                       \/                   \/                \/
+                                                                       h1           paragraph                 h2
+

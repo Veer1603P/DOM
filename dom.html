@@ -1,0 +1,51 @@
+<!-- basic of dom -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="first-div">
+        <h1 class="new" id="first-heading">Dom learning</h1>
+        <p class="para">para 1</p>
+        <h2>seond heading</h2>
+    </div>
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+        </ul>
+    </div>
+
+<script>
+    console.log("HELLO WORLD");
+
+    const first = document.getElementById('first-heading');
+    console.log(first);
+    console.log(first.id);
+    console.log(first.className);
+    first.style.color = "red";
+    
+    const doc = document.getElementsByClassName("first-div");  
+    console.log(doc);
+    
+    const log = document.getElementsByTagName("div");
+    console.log(log);
+
+    const query = document.querySelector("h1");
+    console.log(query);
+    
+    const query1 = document.querySelector("#first-heading");
+    console.log(query1);
+    
+    const query2 = document.querySelector(".new");
+    console.log(query2);
+
+    const allquery = document.querySelectorAll("div")
+    console.log(allquery);
+    
+    
+    
+</script>
+</html>
