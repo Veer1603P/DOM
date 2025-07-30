@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="first-heading">HELLO WORLD</h1>
+<p class="para">Dom learning is important</p>
+<p class="para">Welcome Home</p>
+<p class="para">Third Paragraph</p>
+</body>
+<script>
+    const firstH = document.getElementById("first-heading");
+    firstH.style.cssText = "color:Navy ; font-size:125px"
+    const all = document.querySelectorAll(".para");
+    all.forEach((val) => {
+        val.style.backgroundColor = "cyan";
+        val.style.border = "solid";
+        val.style.borderradius = "20px";
+        val.style.borderColor = "Navy"
+    });
+    console.log(all);
+    const query = document.querySelector("#first-heading")
+    query.style.cssText = "color:red ; font-size:100px ; border:solid ; border-radius:20px";
+</script>
+</html>
