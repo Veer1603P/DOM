@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body>
+    <div style="padding-block:50 ; text-align: center; width:100%">
+        <div style="padding-block:50px ;background-color: cadetblue;">
+            <button class="submit" style="padding: 20px; background-color:red; color: white; font-size: 20px; text-align: center; border-radius:20px;">RED</button>
+            <button class="submit" style="padding: 20px; background-color: navy; color: white; font-size: 20px; text-align: center;border-radius:20px;">BLUE</button>
+            <button class="submit" style="padding: 20px; background-color:yellow; color: black; font-size: 20px; text-align: center;border-radius:20px;">YELLOW</button>
+            <button class="submit" style="padding: 20px; background-color:green; color: black; font-size: 20px; text-align: center;border-radius:20px;">GREEN</button>
+            <button class="submit" style="padding: 20px; background-color:palevioletred; color: black; font-size: 20px; text-align: center;border-radius:20px;">PALEVOILETRED</button>
+        </div>
+    </div>
+    <!-- <div style="padding-block:20%; background-color: hotpink;"> -->
+        <div id="formDiv">
+        <form class="form">
+            Enter your name:<input type="text" placeholder="enter here" required><br><br>
+            Enter your age:<input type="number" placeholder="enter here" required><br><br>
+            Enter your email:<input type="email" required placeholder="enter here"><br><br>
+            <button class="submit">SUBMIT</button>
+        </form>
+    </div>
+</body>
+<script>
+        const buttons = document.querySelectorAll(".submit");
+        const formDiv = document.getElementById("formDiv")
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const buttonColor = button.style.backgroundColor;
+                document.body.style.backgroundColor = buttonColor;
+            });
+        });
+        const form = document.getElementsByClassName('form');
+        console.log(form);
+        form[0].addEventListener('submit' ,() => alert('Form submitted'))      
+</script>
+</html>
