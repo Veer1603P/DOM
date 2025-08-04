@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Heading 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas voluptate perferendis deleniti cum atque quis cupiditate quia id totam dicta suscipit reiciendis, pariatur ratione ex earum quasi itaque illum?</p>
+
+    <h2 id = "second_heading"> 2ND HEADING</h2> 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis est harum in, saepe necessitatibus, quis omnis nulla aspernatur alias facilis facere iure sint impedit qui commodi aliquam veniam tempora voluptatem?</p>
+</body>
+<script>
+
+    // create and append
+    const firstH = document.createElement('h1');//create element 
+    firstH.id = "first-heading";//id
+    firstH.className="para";// class
+    const textNode = document.createTextNode("Hello  World , Welcome to the page");
+    firstH.appendChild(textNode);//append child
+    document.body.appendChild(firstH);// append child
+
+
+    //create and append
+    const Paragraph = document.createElement('p');
+    Paragraph.id = "PARA";
+    Paragraph.className = "paragraph";
+    const para_text = document.createTextNode("A paragraph is a collection of words combined together to make a longer unit than a sentence. It's a set of sentences that are well-organized and coherent, and they're all about the same thing. Several sentences often make up a paragraph. There are normally three to eight sentences in a paragraph. Almost all of the writing one reads in a textbook or an article can be grouped into paragraphs if it is longer than a few sentences");
+    Paragraph.appendChild(para_text);
+    document.body.appendChild(para_text);
+
+
+    // remove 
+    const rmhead = document.getElementById('second_heading');
+    rmhead.remove();
+    
+    //  replace 
+    const heading2 = document.createElement('h2');
+    heading2.id = 'heading2';
+    const text = document.createTextNode("Hello World")
+    heading2.appendChild(text);
+    document.body.appendChild(heading2);
+    const paragraph = document.getElementsByTagName('p');
+    console.log(paragraph);
+    paragraph[0].replaceWith(heading2)
+
+</script>
+</html>
